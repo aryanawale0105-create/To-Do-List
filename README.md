@@ -77,7 +77,7 @@ To-Do-List/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/piyushlohar2008-byte/To-Do-List.git
+git clone https://github.com/aryanawale0105-create/To-Do-List.git
 ```
 
 2. Open the project folder in **Visual Studio Code**.
@@ -86,7 +86,7 @@ git clone https://github.com/piyushlohar2008-byte/To-Do-List.git
 
 ## 🌐 Live Demo
 
-**[View Live To-Do List](https://piyushlohar2008-byte.github.io/To-Do-List/)**
+**[View Live To-Do List](https://aryanawale0105-create.github.io/To-Do-List/)**
 
 ## 🎓 Learning Project
 
@@ -107,7 +107,7 @@ It represents practical implementation of JavaScript fundamentals through a real
 
 ## 👨‍💻 Developer
 
-**Piyush Lohar**
+**Aryan Awale**
 
 Computer Science Student | Web Developer | Aspiring Full-Stack Developer
 
