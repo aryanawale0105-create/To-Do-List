@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow - Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="To-do-list.png" />
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m3 17 2 2 4-4" />
+                    <path d="m3 7 2 2 4-4" />
+                    <path d="M13 6h8" />
+                    <path d="M13 12h8" />
+                    <path d="M13 18h8" />
+                </svg>
+                TaskFlow
+            </a>
+            <div class="search-box">
+                <span class="search-icon">&#128065;</span>
+                <input type="text" id="searchInput" placeholder="Search tasks..." />
+            </div>
+        </div>
+    </header>
+
+    <!-- App Main Content -->
+    <div class="app-container">
+
+        <!-- Sidebar / Additional Content -->
+        <aside class="sidebar">
+            <div class="card">
+                <h3>Overview</h3>
+                <div class="stat-group">
+                    <div class="stat-row">
+                        <span>Total Tasks:</span>
+                        <span id="statTotal" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>Completed:</span>
+                        <span id="statCompleted" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>Pending:</span>
+                        <span id="statPending" class="stat-value">0</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div id="progressBar" class="progress-bar-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Productivity Tip</h3>
+                <p style="font-size: 0.813rem; color: var(--text-muted); line-height: 1.4;">
+                    Break tasks into smaller, manageable sub-tasks. Focus on High Priority items first during your peak
+                    productivity hours.
+                </p>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="main-content">
+
+            <!-- New Task Input -->
+            <form id="taskForm" class="card task-form">
+                <input type="text" id="taskInput" placeholder="Add a new task..." required />
+                <select id="prioritySelect" class="select-input">
+                    <option value="low">Low Priority</option>
+                    <option value="medium" selected>Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Add Task</button>
+            </form>
+
+            <!-- Task List Area -->
+            <div class="card" style="display: flex; flex-direction: column; gap: 1rem;">
+                <div class="toolbar">
+                    <div class="filter-group">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="pending">Pending</button>
+                        <button class="filter-btn" data-filter="completed">Completed</button>
+                    </div>
+                </div>
+
+                <ul id="taskList" class="task-list"></ul>
+                <div id="emptyState" class="empty-state" style="display: none;">No tasks found.</div>
+            </div>
+
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
